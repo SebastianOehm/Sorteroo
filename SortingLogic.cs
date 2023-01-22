@@ -10,24 +10,21 @@ namespace Sorteroo
     {
         static public int[] Sorter(int[] arr)
         {
-            int i;
-            int temp = 0;
-            bool success = false;
-            while (!success) 
+            while (true) 
             {
-                i = 0;
+                int i = 0;
                 bool swap = false;
-            while (i < arr.Length - 1)
-            {
-                    if (arr[i] > arr[i+1])
+                while (i < arr.Length - 1)
                 {
-                    temp = arr[i];
+                    if (arr[i] > arr[i+1])
+                    {
+                    int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
                     swap = true;
-                }
+                    }
                 i++;
-            }
+                }
                 if (swap == false) { break; }
             }
             return arr;
