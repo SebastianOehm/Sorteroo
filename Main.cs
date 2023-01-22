@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             int[] array = { 8, 2, 5, 70, 42, 61, 50, 22 };
-            int[] array2 = SortingLogic.Sorter(array);
+            array = SortingLogic.Sorter(array);
             int c = 0;
             foreach(int i in array) 
             {

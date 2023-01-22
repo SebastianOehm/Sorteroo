@@ -10,15 +10,12 @@ namespace Sorteroo
     {
         public static int inputToInt()
         {
-            int result = 0;
-            bool success = false;
-            while (!success)
+            while (true)
             {
                 try
                 {
                     Console.Write("\nEnter a (non-decimal) number \n>");
-                    result = int.Parse(Console.ReadLine());
-                    success = true;
+                    int result = int.Parse(Console.ReadLine());
                     return result;
                 }
                 catch
@@ -27,7 +24,6 @@ namespace Sorteroo
                     continue;
                 }
             }
-            return result;
         }
     }
 }

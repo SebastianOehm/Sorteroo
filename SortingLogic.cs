@@ -8,31 +8,31 @@ namespace Sorteroo
 {
     internal class SortingLogic
     {
-        static public int[] Sorter(int[] arr)
+        static public int[] Sorter(int[] array)
         {
             while (true) 
             {
                 int i = 0;
                 bool swap = false;
-                while (i < arr.Length - 1)
+                while (i < array.Length - 1)
                 {
-                    if (arr[i] > arr[i+1])
+                    if (array[i] > array[i+1])
                     {
-                    int temp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = temp;
+                    int tmp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = tmp;
                     swap = true;
                     }
                 i++;
                 }
                 if (swap == false) { break; }
             }
-            return arr;
+            return array;
         }
-        public static bool DoesContain(int[] arr, int number) 
+        public static bool DoesContain(int[] array, int number) 
         {
             bool answer = false;
-            foreach (int item in arr)
+            foreach (int item in array)
             {
                 if (item == number) { answer = true; }
             }
