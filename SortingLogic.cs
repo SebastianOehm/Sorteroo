@@ -17,17 +17,17 @@ namespace Sorteroo
             {
                 i = 0;
                 bool swap = false;
-                while (i < arr.Length - 1)
-                {
+            while (i < arr.Length - 1)
+            {
                     if (arr[i] > arr[i+1])
-                    {
+                {
                     temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
                     swap = true;
-                    }
-                i++;
                 }
+                i++;
+            }
                 if (swap == false) { break; }
             }
             return arr;
